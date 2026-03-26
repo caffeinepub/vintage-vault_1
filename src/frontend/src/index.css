@@ -1,0 +1,134 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Playfair Display";
+  src: url("/assets/fonts/PlayfairDisplay.woff2") format("woff2");
+  font-weight: 400 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DM Sans";
+  src: url("/assets/fonts/DMSans.woff2") format("woff2");
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer base {
+  :root {
+    --radius: 0.75rem;
+
+    /* Vintage Vault Palette — OKLCH L C H */
+    /* Deep burgundy-brown for header/footer */
+    --background: 0.94 0.03 83;
+    --foreground: 0.2 0.02 45;
+    --card: 0.97 0.02 80;
+    --card-foreground: 0.2 0.02 45;
+    --popover: 0.97 0.02 80;
+    --popover-foreground: 0.2 0.02 45;
+
+    /* Gold as primary */
+    --primary: 0.67 0.09 78;
+    --primary-foreground: 0.15 0.01 45;
+
+    /* Pale tan secondary */
+    --secondary: 0.89 0.04 82;
+    --secondary-foreground: 0.28 0.05 22;
+
+    --muted: 0.92 0.03 83;
+    --muted-foreground: 0.5 0.03 50;
+
+    --accent: 0.89 0.04 82;
+    --accent-foreground: 0.28 0.05 22;
+
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 0.985 0 0;
+
+    --border: 0.84 0.04 80;
+    --input: 0.88 0.04 80;
+    --ring: 0.67 0.09 78;
+
+    /* Vintage dark (header/footer) */
+    --vintage-dark: oklch(0.27 0.06 22);
+    --vintage-darker: oklch(0.22 0.06 22);
+    --vintage-cream: oklch(0.94 0.03 83);
+    --vintage-tan: oklch(0.89 0.04 82);
+    --vintage-gold: oklch(0.67 0.09 78);
+    --vintage-gold-light: oklch(0.72 0.09 78);
+    --vintage-ivory: oklch(0.95 0.02 88);
+    --vintage-text: oklch(0.2 0.02 45);
+    --vintage-text-muted: oklch(0.42 0.03 50);
+
+    --chart-1: 0.646 0.222 41.116;
+    --chart-2: 0.6 0.118 184.704;
+    --chart-3: 0.398 0.07 227.392;
+    --chart-4: 0.828 0.189 84.429;
+    --chart-5: 0.769 0.188 70.08;
+    --sidebar: 0.27 0.06 22;
+    --sidebar-foreground: 0.95 0.02 88;
+    --sidebar-primary: 0.67 0.09 78;
+    --sidebar-primary-foreground: 0.95 0.02 88;
+    --sidebar-accent: 0.35 0.06 22;
+    --sidebar-accent-foreground: 0.95 0.02 88;
+    --sidebar-border: 0.35 0.06 22;
+    --sidebar-ring: 0.67 0.09 78;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "DM Sans", system-ui, sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Playfair Display", Georgia, serif;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: "Playfair Display", Georgia, serif;
+  }
+  .font-body {
+    font-family: "DM Sans", system-ui, sans-serif;
+  }
+  .text-vintage-dark {
+    color: var(--vintage-dark);
+  }
+  .text-vintage-gold {
+    color: var(--vintage-gold);
+  }
+  .text-vintage-ivory {
+    color: var(--vintage-ivory);
+  }
+  .bg-vintage-dark {
+    background-color: var(--vintage-dark);
+  }
+  .bg-vintage-darker {
+    background-color: var(--vintage-darker);
+  }
+  .bg-vintage-gold {
+    background-color: var(--vintage-gold);
+  }
+  .bg-vintage-cream {
+    background-color: var(--vintage-cream);
+  }
+  .bg-vintage-tan {
+    background-color: var(--vintage-tan);
+  }
+  .border-vintage-gold {
+    border-color: var(--vintage-gold);
+  }
+}
